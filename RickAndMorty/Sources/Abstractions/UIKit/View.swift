@@ -8,7 +8,6 @@ class View: UIView {
     init() {
         super.init(frame: .zero)
         backgroundColor = .white
-        translatesAutoresizingMaskIntoConstraints = false
         setupViewHierarchy()
         setupProperties()
         setupLayoutConstraints()

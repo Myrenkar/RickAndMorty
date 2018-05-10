@@ -3,23 +3,21 @@ import RxSwift
 import UIKit
 
 protocol CharactersViewModelProtocol {
-    var characters: Observable<[Character]> { get }
-
+    var characters: BehaviorSubject<[Character]> { get }
+    
     func getCharacters()
     func getCharactersImage(withURL url: URL) -> Single<UIImage>
 }
 
 class CharactersViewModel: CharactersViewModelProtocol {
     private let dependecies: ApplicationDependenciesProvider
-    private let charactersSubject = PublishSubject<[Character]>()
     private let disposeBag = DisposeBag()
+
+    var characters: BehaviorSubject<[Character]>
 
     init(dependecies: ApplicationDependenciesProvider) {
         self.dependecies = dependecies
-    }
-
-    var characters: Observable<[Character]> {
-        return charactersSubject.asObservable()
+        self.characters = BehaviorSubject(value: [])
     }
 
     func getCharacters() {
@@ -27,9 +25,8 @@ class CharactersViewModel: CharactersViewModelProtocol {
             .filter { $0.data != nil }
             .map { try JSONDecoder().decode(CharacterResponse.self, from: $0.data!) }
             .map { $0.characters }
-            .subscribe(onSuccess: { [unowned self] in
-                self.charactersSubject.onNext($0)
-            })
+            .asObservable()
+            .bind(to: characters)
             .disposed(by: disposeBag)
     }
 

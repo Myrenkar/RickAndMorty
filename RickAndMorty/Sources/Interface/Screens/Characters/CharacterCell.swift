@@ -1,10 +1,11 @@
 import UIKit
 
 final class CharacterCell: CollectionViewCell {
-    
+
     private(set) lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
 
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView

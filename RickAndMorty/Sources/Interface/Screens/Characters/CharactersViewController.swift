@@ -28,24 +28,21 @@ final class CharactersViewController: ViewController {
     override func setupProperties() {
         super.setupProperties()
 
-        customView.collectionView.registerClass(CharacterCell.self)
+        customView.collectionView.register(CharacterCell.self, forCellWithReuseIdentifier: CharacterCell.reuseIdentifier)
     }
 
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.characters
-            .bind(to: customView.collectionView.rx.items(cellIdentifier: CharacterCell.reuseIdentifier, cellType: CharacterCell.self)) { [unowned self] _, element, cell in
-                print("Downloaded")
-
-                let localDisposeBag = DisposeBag()
+        viewModel.characters.asDriver(onErrorJustReturn: [])
+            .debug()
+            .drive(customView.collectionView.rx.items(cellIdentifier: CharacterCell.reuseIdentifier, cellType: CharacterCell.self), curriedArgument: { [unowned self] _, element, cell in
                 cell.nameLabel.text = element.name
-
                 self.viewModel.getCharactersImage(withURL: element.image)
                     .asObservable()
                     .bind(to: cell.imageView.rx.image)
-                    .disposed(by: localDisposeBag)
-            }
+                    .disposed(by: self.disposeBag)
+            })
             .disposed(by: disposeBag)
     }
 
