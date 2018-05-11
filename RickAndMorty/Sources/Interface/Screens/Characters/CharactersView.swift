@@ -1,12 +1,19 @@
 import UIKit
 
 final class CharactersView: View {
+
+    // MARK: - Properties
+
     private let flowLayoutProvider: FlowLayoutProvidable
+
+    // MARK: - Init
 
     init(flowLayoutProvider: FlowLayoutProvidable) {
         self.flowLayoutProvider = flowLayoutProvider
         super.init()
     }
+
+    // MARK: - Subviews
 
     private(set) lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayoutProvider.defaultLayout)
@@ -16,6 +23,8 @@ final class CharactersView: View {
 
         return collectionView
     }()
+
+    // MARK: - Setup
 
     override func setupViewHierarchy() {
         super.setupViewHierarchy()

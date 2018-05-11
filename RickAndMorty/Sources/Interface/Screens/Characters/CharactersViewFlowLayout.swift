@@ -1,8 +1,8 @@
 import UIKit
 
 final class CharactersViewFlowLayout: UICollectionViewFlowLayout {
-    override func prepare() {
 
+    override func prepare() {
         if let collectionView = collectionView, collectionView.bounds.width > 0 {
             let calculatedItemWidth = (round(collectionView.bounds.width) - 3 * 8) / 2
             let calculatedItemHeight = calculatedItemWidth * 2
@@ -16,4 +16,5 @@ final class CharactersViewFlowLayout: UICollectionViewFlowLayout {
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return false
     }
+
 }

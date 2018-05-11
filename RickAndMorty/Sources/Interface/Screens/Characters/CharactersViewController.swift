@@ -3,23 +3,24 @@ import RxSwift
 import RxCocoa
 
 final class CharactersViewController: ViewController {
+
+    // MARK: - Properties
+
     private let disposeBag = DisposeBag()
     private let viewModel: CharactersViewModelProtocol
     private let flowLayoutProvider: FlowLayoutProvidable
     private let customView: CharactersView
 
+    // MARK: - Init
+
     init(viewModel: CharactersViewModelProtocol, flowLayoutProvider: FlowLayoutProvidable) {
         self.viewModel = viewModel
-        customView = CharactersView(flowLayoutProvider: flowLayoutProvider)
+        self.customView = CharactersView(flowLayoutProvider: flowLayoutProvider)
         self.flowLayoutProvider = flowLayoutProvider
         super.init()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        viewModel.getCharacters()
-    }
+    // MARK: - Setup
 
     override func loadView() {
         view = customView
@@ -35,12 +36,9 @@ final class CharactersViewController: ViewController {
         super.setupBindings()
 
         viewModel.characters.asDriver(onErrorJustReturn: [])
-            .drive(customView.collectionView.rx.items(cellIdentifier: CharacterCell.reuseIdentifier, cellType: CharacterCell.self), curriedArgument: { [unowned self] _, element, cell in
+            .drive(customView.collectionView.rx.items(cellIdentifier: CharacterCell.reuseIdentifier, cellType: CharacterCell.self), curriedArgument: { _, element, cell in
                 cell.nameLabel.text = element.name
-                self.viewModel.getCharactersImage(withURL: element.image)
-                    .asObservable()
-                    .bind(to: cell.imageView.rx.image)
-                    .disposed(by: self.disposeBag)
+                cell.imageView.setImage(with: element.image)
             })
             .disposed(by: disposeBag)
     }

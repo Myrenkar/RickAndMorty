@@ -2,6 +2,8 @@ import UIKit
 
 final class CharacterCell: CollectionViewCell {
 
+    // MARK: - Subviews
+
     private(set) lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
 
@@ -21,6 +23,8 @@ final class CharacterCell: CollectionViewCell {
 
         return label
     }()
+
+    // MARK: - Setup
 
     override func setupViewHierarchy() {
         super.setupViewHierarchy()
