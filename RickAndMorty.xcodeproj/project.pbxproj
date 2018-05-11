@@ -123,6 +123,7 @@
 		7352CE3720A5B1AC00BFC5FC /* RickAndMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734743BF20A445F70036B230 /* RickAndMortyService.swift */; };
 		7352CE4320A5B32300BFC5FC /* CharactersViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE4220A5B31200BFC5FC /* CharactersViewFlowLayout.swift */; };
 		7352CE4420A5B32700BFC5FC /* CharactersViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE3D20A5B2FB00BFC5FC /* CharactersViewFlowLayout.swift */; };
+		7352CE4620A5B42300BFC5FC /* RickAndMorty.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7352CE4520A5B42300BFC5FC /* RickAndMorty.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +209,7 @@
 		7352CE1420A5B16500BFC5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7352CE3D20A5B2FB00BFC5FC /* CharactersViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewFlowLayout.swift; sourceTree = "<group>"; };
 		7352CE4220A5B31200BFC5FC /* CharactersViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewFlowLayout.swift; sourceTree = "<group>"; };
+		7352CE4520A5B42300BFC5FC /* RickAndMorty.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RickAndMorty.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +419,7 @@
 				7352CE1320A5B16500BFC5FC /* LaunchScreen.storyboard */,
 				7352CE1220A5B15E00BFC5FC /* Info.plist */,
 				7352CDE320A5AE1D00BFC5FC /* Shared.xcassets */,
+				7352CE4520A5B42300BFC5FC /* RickAndMorty.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7352CE4620A5B42300BFC5FC /* RickAndMorty.xcassets in Resources */,
 				7352CE1120A5B13A00BFC5FC /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
