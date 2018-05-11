@@ -2,8 +2,8 @@ import Foundation
 
 /// Scheme for the service
 enum Scheme: String {
-    case HTTP = "http"
-    case HTTPS = "https"
+    case http = "http"
+    case https = "https"
 }
 
 
@@ -23,5 +23,5 @@ protocol APIService {
 extension APIService {
     
     /// Default scheme `https`
-    var scheme: Scheme { return .HTTPS }
+    var scheme: Scheme { return .https }
 }

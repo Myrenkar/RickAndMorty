@@ -5,8 +5,8 @@ import RxCocoa
 final class CharactersViewController: ViewController {
     private let disposeBag = DisposeBag()
     private let viewModel: CharactersViewModelProtocol
-    private let customView: CharactersView
     private let flowLayoutProvider: FlowLayoutProvidable
+    private let customView: CharactersView
 
     init(viewModel: CharactersViewModelProtocol, flowLayoutProvider: FlowLayoutProvidable) {
         self.viewModel = viewModel
@@ -28,14 +28,13 @@ final class CharactersViewController: ViewController {
     override func setupProperties() {
         super.setupProperties()
 
-        customView.collectionView.register(CharacterCell.self, forCellWithReuseIdentifier: CharacterCell.reuseIdentifier)
+        customView.collectionView.registerClass(CharacterCell.self)
     }
 
     override func setupBindings() {
         super.setupBindings()
 
         viewModel.characters.asDriver(onErrorJustReturn: [])
-            .debug()
             .drive(customView.collectionView.rx.items(cellIdentifier: CharacterCell.reuseIdentifier, cellType: CharacterCell.self), curriedArgument: { [unowned self] _, element, cell in
                 cell.nameLabel.text = element.name
                 self.viewModel.getCharactersImage(withURL: element.image)

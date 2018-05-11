@@ -15,8 +15,9 @@ final class CharacterCell: CollectionViewCell {
         let label = UILabel(frame: .zero)
 
         label.font = .systemFont(ofSize: 18)
-        label.textColor = .green
+        label.textColor = .purple
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.lineBreakMode = .byTruncatingTail
 
         return label
     }()

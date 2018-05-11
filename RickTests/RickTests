@@ -1,5 +1,6 @@
+
 import XCTest
-@testable import RickAndMorty
+@testable import Rick
 
 class RickAndMortyTests: XCTestCase {
     

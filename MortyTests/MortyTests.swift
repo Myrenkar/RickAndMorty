@@ -1,7 +1,15 @@
-import XCTest
-@testable import RickAndMorty
+//
+//  MortyTests.swift
+//  MortyTests
+//
+//  Created by Piotr Torczyński on 11.05.2018.
+//  Copyright © 2018 Smartapps. All rights reserved.
+//
 
-class RickAndMortyTests: XCTestCase {
+import XCTest
+@testable import Morty
+
+class MortyTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
