@@ -28,7 +28,7 @@ final class CharactersViewController: ViewController {
 
     override func setupProperties() {
         super.setupProperties()
-
+        title = "Rick and Morty characters"
         customView.collectionView.registerClass(CharacterCell.self)
     }
 

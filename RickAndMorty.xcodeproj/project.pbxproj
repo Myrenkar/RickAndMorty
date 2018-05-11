@@ -292,7 +292,6 @@
 		734743AD20A445860036B230 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				734743F820A457A40036B230 /* Protocols */,
 				734743DB20A447440036B230 /* Abstractions */,
 				734743D620A447180036B230 /* Application */,
 				734743CD20A446600036B230 /* Extensions */,
@@ -300,6 +299,7 @@
 				734743E920A4568C0036B230 /* Interface */,
 				734743D220A446C90036B230 /* Models */,
 				734743AE20A445F70036B230 /* Network */,
+				734743F820A457A40036B230 /* Protocols */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -767,6 +767,7 @@
 					7352CDFA20A5B03300BFC5FC = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						TestTargetID = 7352CDE720A5B03000BFC5FC;
 					};
 				};
 			};
@@ -1425,6 +1426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -1440,6 +1442,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndMorty.app/RickAndMorty";
 			};
 			name = Debug;
 		};
@@ -1447,6 +1450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -1461,6 +1465,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndMorty.app/RickAndMorty";
 			};
 			name = Release;
 		};

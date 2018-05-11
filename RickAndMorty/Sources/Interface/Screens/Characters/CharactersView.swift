@@ -19,7 +19,7 @@ final class CharactersView: View {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayoutProvider.defaultLayout)
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .gray
+        collectionView.backgroundColor = .lightGray
 
         return collectionView
     }()
