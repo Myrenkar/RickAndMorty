@@ -29,7 +29,7 @@ final class CharacterCell: CollectionViewCell {
         let label = UILabel(frame: .zero)
 
         label.font = .systemFont(ofSize: 24)
-        label.textColor = .white
+        label.textColor = Colors.text
         label.translatesAutoresizingMaskIntoConstraints = false
         label.lineBreakMode = .byTruncatingTail
 
