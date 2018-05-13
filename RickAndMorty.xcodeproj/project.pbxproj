@@ -130,6 +130,7 @@
 		D50E147920A8CB4100482AEE /* APICharactersServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E147620A8CB4100482AEE /* APICharactersServiceSpy.swift */; };
 		D50E147E20A8CC4800482AEE /* APICharactersServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E147D20A8CC4800482AEE /* APICharactersServiceSpec.swift */; };
 		D50E148320A8CE5D00482AEE /* APICharactersServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E148220A8CE5D00482AEE /* APICharactersServiceSpec.swift */; };
+		D50E148820A8D02200482AEE /* APICharactersServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E148720A8D02200482AEE /* APICharactersServiceSpec.swift */; };
 		D57C901520A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
 		D57C901620A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
 		D57C901720A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
@@ -230,6 +231,7 @@
 		D50E147620A8CB4100482AEE /* APICharactersServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharactersServiceSpy.swift; sourceTree = "<group>"; };
 		D50E147D20A8CC4800482AEE /* APICharactersServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharactersServiceSpec.swift; sourceTree = "<group>"; };
 		D50E148220A8CE5D00482AEE /* APICharactersServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharactersServiceSpec.swift; sourceTree = "<group>"; };
+		D50E148720A8D02200482AEE /* APICharactersServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharactersServiceSpec.swift; sourceTree = "<group>"; };
 		D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.UIImageView.swift; sourceTree = "<group>"; };
 		D5AC091E20A5C5D5007143F5 /* CharactersViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelSpec.swift; sourceTree = "<group>"; };
 		D5AC092C20A5E86F007143F5 /* APIClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientSpy.swift; sourceTree = "<group>"; };
@@ -535,6 +537,7 @@
 		7352CDB020A5AC2000BFC5FC /* MortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				D50E148420A8D00A00482AEE /* Sources */,
 				7352CDB120A5AC2000BFC5FC /* MortyTests.swift */,
 				7352CDB320A5AC2000BFC5FC /* Info.plist */,
 			);
@@ -767,6 +770,30 @@
 			isa = PBXGroup;
 			children = (
 				D50E148220A8CE5D00482AEE /* APICharactersServiceSpec.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D50E148420A8D00A00482AEE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D50E148520A8D01100482AEE /* Network */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D50E148520A8D01100482AEE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D50E148620A8D01600482AEE /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D50E148620A8D01600482AEE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D50E148720A8D02200482AEE /* APICharactersServiceSpec.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1215,6 +1242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AC092E20A5E86F007143F5 /* APIClientSpy.swift in Sources */,
+				D50E148820A8D02200482AEE /* APICharactersServiceSpec.swift in Sources */,
 				7352CDB220A5AC2000BFC5FC /* MortyTests.swift in Sources */,
 				D50E146520A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */,
 				D50E147820A8CB4100482AEE /* APICharactersServiceSpy.swift in Sources */,
