@@ -6,6 +6,6 @@ protocol FlowLayoutProvidable {
 
 class FlowLayoutProvider: FlowLayoutProvidable {
     lazy var defaultLayout: UICollectionViewFlowLayout = {
-        return CharactersViewFlowLayout()
+        CharactersViewFlowLayout()
     }()
 }

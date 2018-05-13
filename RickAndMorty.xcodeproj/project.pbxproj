@@ -110,6 +110,12 @@
 		7352CE4320A5B32300BFC5FC /* CharactersViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE4220A5B31200BFC5FC /* CharactersViewFlowLayout.swift */; };
 		7352CE4420A5B32700BFC5FC /* CharactersViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE3D20A5B2FB00BFC5FC /* CharactersViewFlowLayout.swift */; };
 		7352CE4620A5B42300BFC5FC /* RickAndMorty.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7352CE4520A5B42300BFC5FC /* RickAndMorty.xcassets */; };
+		7352CE4C20A77BDD00BFC5FC /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE4B20A77BDD00BFC5FC /* Colorable.swift */; };
+		7352CE4D20A77BDD00BFC5FC /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE4B20A77BDD00BFC5FC /* Colorable.swift */; };
+		7352CE4E20A77BDD00BFC5FC /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE4B20A77BDD00BFC5FC /* Colorable.swift */; };
+		7352CE5220A77C7600BFC5FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE5120A77C7600BFC5FC /* Colors.swift */; };
+		7352CE5520A77CAE00BFC5FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE5420A77CA700BFC5FC /* Colors.swift */; };
+		7352CE5720A77CD300BFC5FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE5620A77CC900BFC5FC /* Colors.swift */; };
 		D57C901520A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
 		D57C901620A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
 		D57C901720A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
@@ -198,6 +204,10 @@
 		7352CE3D20A5B2FB00BFC5FC /* CharactersViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewFlowLayout.swift; sourceTree = "<group>"; };
 		7352CE4220A5B31200BFC5FC /* CharactersViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewFlowLayout.swift; sourceTree = "<group>"; };
 		7352CE4520A5B42300BFC5FC /* RickAndMorty.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RickAndMorty.xcassets; sourceTree = "<group>"; };
+		7352CE4B20A77BDD00BFC5FC /* Colorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
+		7352CE5120A77C7600BFC5FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7352CE5420A77CA700BFC5FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7352CE5620A77CC900BFC5FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.UIImageView.swift; sourceTree = "<group>"; };
 		D5AC091E20A5C5D5007143F5 /* CharactersViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelSpec.swift; sourceTree = "<group>"; };
 		D5AC092C20A5E86F007143F5 /* APIClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientSpy.swift; sourceTree = "<group>"; };
@@ -296,7 +306,6 @@
 		734743AD20A445860036B230 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				734743F820A457A40036B230 /* Protocols */,
 				734743DB20A447440036B230 /* Abstractions */,
 				734743D620A447180036B230 /* Application */,
 				734743CD20A446600036B230 /* Extensions */,
@@ -304,6 +313,7 @@
 				734743E920A4568C0036B230 /* Interface */,
 				734743D220A446C90036B230 /* Models */,
 				734743AE20A445F70036B230 /* Network */,
+				734743F820A457A40036B230 /* Protocols */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -423,6 +433,7 @@
 		734743E920A4568C0036B230 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				7352CE4F20A77C4F00BFC5FC /* Colors */,
 				734743EA20A4569A0036B230 /* Screens */,
 			);
 			path = Interface;
@@ -450,6 +461,7 @@
 		734743F820A457A40036B230 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7352CE4B20A77BDD00BFC5FC /* Colorable.swift */,
 				734743FA20A457B30036B230 /* Reusable.swift */,
 				734743F920A457B30036B230 /* ViewLayoutProtocol.swift */,
 			);
@@ -563,6 +575,7 @@
 		7352CE3A20A5B2BE00BFC5FC /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				7352CE5320A77CA000BFC5FC /* Colors */,
 				7352CE3B20A5B2C700BFC5FC /* Screens */,
 			);
 			path = Interface;
@@ -595,6 +608,7 @@
 		7352CE4020A5B31200BFC5FC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7352CE5020A77C5800BFC5FC /* Colors */,
 				7352CE4120A5B31200BFC5FC /* Characters */,
 			);
 			path = Screens;
@@ -606,6 +620,30 @@
 				7352CE4220A5B31200BFC5FC /* CharactersViewFlowLayout.swift */,
 			);
 			path = Characters;
+			sourceTree = "<group>";
+		};
+		7352CE4F20A77C4F00BFC5FC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7352CE5120A77C7600BFC5FC /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		7352CE5020A77C5800BFC5FC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7352CE5620A77CC900BFC5FC /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		7352CE5320A77CA000BFC5FC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7352CE5420A77CA700BFC5FC /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		D5AC091B20A5C5A4007143F5 /* Interface */ = {
@@ -953,10 +991,12 @@
 				734743D520A446E00036B230 /* Result.swift in Sources */,
 				734743FF20A457ED0036B230 /* UIKit.UICollectionView.swift in Sources */,
 				734743FB20A457B30036B230 /* ViewLayoutProtocol.swift in Sources */,
+				7352CE5520A77CAE00BFC5FC /* Colors.swift in Sources */,
 				734743F120A456FF0036B230 /* ViewController.swift in Sources */,
 				7352CD9320A4775800BFC5FC /* CharacterResponse.swift in Sources */,
 				734743EC20A456D40036B230 /* CharactersViewController.swift in Sources */,
 				7347440020A457ED0036B230 /* UIKit.UITableView.swift in Sources */,
+				7352CE4C20A77BDD00BFC5FC /* Colorable.swift in Sources */,
 				7347441520A46CB10036B230 /* CharactersRequest.swift in Sources */,
 				7352CD9520A47A8900BFC5FC /* CharacterCell.swift in Sources */,
 				734743D920A447290036B230 /* AppDelegate.swift in Sources */,
@@ -1001,10 +1041,12 @@
 				7352CDBF20A5ACF200BFC5FC /* ApplicationDependencies.swift in Sources */,
 				7352CDC020A5ACF200BFC5FC /* CollectionViewCell.swift in Sources */,
 				7352CDC120A5ACF200BFC5FC /* TableViewCell.swift in Sources */,
+				7352CE5720A77CD300BFC5FC /* Colors.swift in Sources */,
 				7352CDC220A5ACF200BFC5FC /* ViewController.swift in Sources */,
 				7352CDC320A5ACF200BFC5FC /* View.swift in Sources */,
 				7352CDC420A5ACF200BFC5FC /* AppDelegate.swift in Sources */,
 				7352CDC520A5ACF200BFC5FC /* ApplicationController.swift in Sources */,
+				7352CE4D20A77BDD00BFC5FC /* Colorable.swift in Sources */,
 				7352CDC620A5ACF200BFC5FC /* Foundation.URLComponents.swift in Sources */,
 				7352CDC720A5ACF200BFC5FC /* Foundation.URLRequest.swift in Sources */,
 				7352CDC820A5ACF200BFC5FC /* UIKit.UICollectionView.swift in Sources */,
@@ -1049,10 +1091,12 @@
 				7352CE1520A5B1AC00BFC5FC /* Reusable.swift in Sources */,
 				7352CE1620A5B1AC00BFC5FC /* ViewLayoutProtocol.swift in Sources */,
 				7352CE1720A5B1AC00BFC5FC /* ApplicationDependencies.swift in Sources */,
+				7352CE5220A77C7600BFC5FC /* Colors.swift in Sources */,
 				7352CE1820A5B1AC00BFC5FC /* CollectionViewCell.swift in Sources */,
 				7352CE1920A5B1AC00BFC5FC /* TableViewCell.swift in Sources */,
 				7352CE1A20A5B1AC00BFC5FC /* ViewController.swift in Sources */,
 				7352CE1B20A5B1AC00BFC5FC /* View.swift in Sources */,
+				7352CE4E20A77BDD00BFC5FC /* Colorable.swift in Sources */,
 				7352CE1C20A5B1AC00BFC5FC /* AppDelegate.swift in Sources */,
 				7352CE1D20A5B1AC00BFC5FC /* ApplicationController.swift in Sources */,
 				7352CE1E20A5B1AC00BFC5FC /* Foundation.URLComponents.swift in Sources */,

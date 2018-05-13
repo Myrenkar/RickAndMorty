@@ -7,7 +7,7 @@ final class CharactersViewFlowLayout: UICollectionViewFlowLayout {
             let calculatedItemWidth = (round(collectionView.bounds.width) - 3 * 8) / 2
             let calculatedItemHeight = calculatedItemWidth
             itemSize = CGSize(width: calculatedItemWidth, height: calculatedItemHeight)
-            minimumLineSpacing = 8
+            minimumLineSpacing = 16
             minimumInteritemSpacing = 8
             sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         }
