@@ -8,9 +8,8 @@ final class ApplicationController {
 
     private let dependencies: ApplicationDependenciesProvider
 
-    private(set) lazy var rootViewController: UINavigationController = {
+    private(set) lazy var rootViewController: UIViewController = {
         let rootViewController = CharactersViewController(viewModel: CharactersViewModel(charactersService: dependencies.charactersService), flowLayoutProvider: FlowLayoutProvider())
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        return navigationController
+        return UINavigationController(rootViewController: rootViewController)
     }()
 }

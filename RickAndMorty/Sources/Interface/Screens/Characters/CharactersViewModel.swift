@@ -1,6 +1,4 @@
-import Foundation
 import RxSwift
-import UIKit
 
 protocol CharactersViewModelProtocol {
     var characters: Observable<[SeriesCharacter]> { get }

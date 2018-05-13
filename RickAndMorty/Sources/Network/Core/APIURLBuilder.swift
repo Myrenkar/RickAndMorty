@@ -1,5 +1,3 @@
-import Foundation
-
 /// Scheme for the service
 enum Scheme: String {
     case http = "http"

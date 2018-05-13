@@ -1,5 +1,3 @@
-import Foundation
-
 /// Defines request's method
 enum Method: String {
     case GET, POST, PUT, DELETE

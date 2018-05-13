@@ -8,7 +8,6 @@ final class CharactersViewController: ViewController {
 
     private let disposeBag = DisposeBag()
     private let viewModel: CharactersViewModelProtocol
-    private let flowLayoutProvider: FlowLayoutProvidable
     private let customView: CharactersView
 
     // MARK: - Init
@@ -16,7 +15,6 @@ final class CharactersViewController: ViewController {
     init(viewModel: CharactersViewModelProtocol, flowLayoutProvider: FlowLayoutProvidable) {
         self.viewModel = viewModel
         self.customView = CharactersView(flowLayoutProvider: flowLayoutProvider)
-        self.flowLayoutProvider = flowLayoutProvider
         super.init()
     }
 
