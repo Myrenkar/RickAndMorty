@@ -14,7 +14,7 @@ protocol APIRequest {
     var path: String { get }
     
     /// HTTP method
-    var service: APIService { get }
+    var urlBuilder: APIURLBuilder { get }
 }
 
 // MARK: - Default values for API request
@@ -22,5 +22,5 @@ extension APIRequest {
     
     var method: Method { return .GET }
     
-    var service: APIService { return RickAndMortyService() }
+    var urlBuilder: APIURLBuilder { return RickAndMortyRLBuilder() }
 }
