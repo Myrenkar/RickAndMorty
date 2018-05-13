@@ -8,7 +8,7 @@ enum Scheme: String {
 
 
 /// Interface for the API services
-protocol APIService {
+protocol APIURLBuilder {
     
     /// Connection scheme, default `http`
     var scheme: Scheme { get }
@@ -20,7 +20,7 @@ protocol APIService {
     var root: String { get }
 }
 
-extension APIService {
+extension APIURLBuilder {
     
     /// Default scheme `https`
     var scheme: Scheme { return .https }

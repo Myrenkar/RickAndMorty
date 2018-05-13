@@ -9,10 +9,10 @@ extension URLComponents {
         self = {
             var components = URLComponents()
             
-            components.scheme = request.service.scheme.rawValue
-            components.host = request.service.host
+            components.scheme = request.urlBuilder.scheme.rawValue
+            components.host = request.urlBuilder.host
             components.path = "/" + NSString.path(withComponents: [
-                request.service.root,
+                request.urlBuilder.root,
                 request.path
             ])
             
