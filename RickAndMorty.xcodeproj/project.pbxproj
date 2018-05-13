@@ -116,6 +116,9 @@
 		7352CE5220A77C7600BFC5FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE5120A77C7600BFC5FC /* Colors.swift */; };
 		7352CE5520A77CAE00BFC5FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE5420A77CA700BFC5FC /* Colors.swift */; };
 		7352CE5720A77CD300BFC5FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352CE5620A77CC900BFC5FC /* Colors.swift */; };
+		D50E146420A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E146320A8AA3F00482AEE /* SeriesCharacter+Fixture.swift */; };
+		D50E146520A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E146320A8AA3F00482AEE /* SeriesCharacter+Fixture.swift */; };
+		D50E146620A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E146320A8AA3F00482AEE /* SeriesCharacter+Fixture.swift */; };
 		D57C901520A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
 		D57C901620A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
 		D57C901720A5B9D30002F94D /* UIKit.UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */; };
@@ -208,6 +211,7 @@
 		7352CE5120A77C7600BFC5FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7352CE5420A77CA700BFC5FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7352CE5620A77CC900BFC5FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D50E146320A8AA3F00482AEE /* SeriesCharacter+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesCharacter+Fixture.swift"; sourceTree = "<group>"; };
 		D57C901420A5B9D30002F94D /* UIKit.UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.UIImageView.swift; sourceTree = "<group>"; };
 		D5AC091E20A5C5D5007143F5 /* CharactersViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelSpec.swift; sourceTree = "<group>"; };
 		D5AC092C20A5E86F007143F5 /* APIClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientSpy.swift; sourceTree = "<group>"; };
@@ -565,6 +569,7 @@
 		7352CE0A20A5B10D00BFC5FC /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				D50E146220A8AA2300482AEE /* Fixtures */,
 				D5AC092520A5E7E6007143F5 /* Doubles */,
 				D5AC091B20A5C5A4007143F5 /* Interface */,
 				7352CE0C20A5B10D00BFC5FC /* Info.plist */,
@@ -644,6 +649,14 @@
 				7352CE5420A77CA700BFC5FC /* Colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		D50E146220A8AA2300482AEE /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				D50E146320A8AA3F00482AEE /* SeriesCharacter+Fixture.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		D5AC091B20A5C5A4007143F5 /* Interface */ = {
@@ -1031,6 +1044,7 @@
 			files = (
 				D5AC092D20A5E86F007143F5 /* APIClientSpy.swift in Sources */,
 				734743A320A43A0E0036B230 /* RickTests in Sources */,
+				D50E146420A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,6 +1095,7 @@
 			files = (
 				D5AC092E20A5E86F007143F5 /* APIClientSpy.swift in Sources */,
 				7352CDB220A5AC2000BFC5FC /* MortyTests.swift in Sources */,
+				D50E146520A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,6 +1146,7 @@
 			files = (
 				D5AC092F20A5E86F007143F5 /* APIClientSpy.swift in Sources */,
 				D5AC092420A5D69E007143F5 /* CharactersViewModelSpec.swift in Sources */,
+				D50E146620A8AA3F00482AEE /* SeriesCharacter+Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
