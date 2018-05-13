@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import RxTest
 
-@testable import Rick
+@testable import Morty
 
 class APICharactersServiceSpec: QuickSpec {
 

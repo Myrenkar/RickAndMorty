@@ -5,7 +5,6 @@ import RxTest
 @testable import RickAndMorty
 
 class CharactersViewModelSpec: QuickSpec {
-
     override func spec() {
         describe("CharactersViewModel") {
             var sut: CharactersViewModel!
@@ -32,5 +31,4 @@ class CharactersViewModelSpec: QuickSpec {
             }
         }
     }
-
 }

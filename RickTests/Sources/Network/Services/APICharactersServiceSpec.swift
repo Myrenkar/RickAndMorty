@@ -5,7 +5,6 @@ import RxTest
 @testable import Rick
 
 class APICharactersServiceSpec: QuickSpec {
-
     override func spec() {
         describe("APICharactersService") {
             var sut: APICharatersService!
@@ -60,5 +59,4 @@ class APICharactersServiceSpec: QuickSpec {
             }
         }
     }
-
 }
