@@ -2,14 +2,14 @@ import Quick
 import Nimble
 import RxTest
 
-@testable import RickAndMorty
+@testable import Rick
 
-class CharactersViewModelSpec: QuickSpec {
+class APICharactersServiceSpec: QuickSpec {
 
     override func spec() {
-        describe("CharactersViewModel") {
+        describe("APICharactersService") {
+            var sut: APICharatersService!
             var apiClientSpy: APIClientSpy!
-            var sut: CharactersViewModel!
             var scheduler: TestScheduler!
             var observer: TestableObserver<[SeriesCharacter]>!
 
@@ -18,12 +18,12 @@ class CharactersViewModelSpec: QuickSpec {
                 scheduler = TestScheduler(initialClock: 0)
                 observer = scheduler.createObserver([SeriesCharacter].self)
 
-                sut = CharactersViewModel(apiClient: apiClientSpy)
+                sut = APICharatersService(apiClient: apiClientSpy)
             }
 
-            context("when binding to characters") {
+            context("when getting characters") {
                 beforeEach {
-                    _ = sut.characters.subscribe(observer)
+                    _ = sut.getCharacters().subscribe(observer)
                 }
 
                 it("should trigger characters request") {
@@ -35,23 +35,27 @@ class CharactersViewModelSpec: QuickSpec {
                 beforeEach {
                     apiClientSpy.responseData = nil
 
-                    _ = sut.characters.subscribe(observer)
+                    _ = sut.getCharacters().subscribe(observer)
                 }
 
-                it("should emit just one event") {
+                it("should emit just completed event") {
                     expect(observer.events.count).to(equal(1))
                 }
             }
 
-            context("when response is valid") {
+            context("when response is valid and has both rick and morty") {
                 beforeEach {
                     apiClientSpy.responseData = SeriesCharacter.testRickAndMorty
 
-                    _ = sut.characters.subscribe(observer)
+                    _ = sut.getCharacters().subscribe(observer)
                 }
 
-                it("should return 2 characters") {
-                    expect(observer.events.first!.value.element!.count).to(equal(2))
+                it("should return only one character") {
+                    expect(observer.events.first!.value.element!.count).to(equal(1))
+                }
+
+                it("should return morty") {
+                    expect(observer.events.first!.value.element!.first!.name).to(equal("Morty"))
                 }
             }
         }

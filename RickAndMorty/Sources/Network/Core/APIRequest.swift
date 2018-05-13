@@ -22,5 +22,5 @@ extension APIRequest {
     
     var method: Method { return .GET }
     
-    var urlBuilder: APIURLBuilder { return RickAndMortyRLBuilder() }
+    var urlBuilder: APIURLBuilder { return RickAndMortyURLBuilder() }
 }
