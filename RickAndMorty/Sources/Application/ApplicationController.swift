@@ -9,7 +9,7 @@ final class ApplicationController {
     private let dependencies: ApplicationDependenciesProvider
 
     private(set) lazy var rootViewController: UINavigationController = {
-        let rootViewController = CharactersViewController(viewModel: CharactersViewModel(dependecies: dependencies), flowLayoutProvider: FlowLayoutProvider())
+        let rootViewController = CharactersViewController(viewModel: CharactersViewModel(apiClient: dependencies.apiClient), flowLayoutProvider: FlowLayoutProvider())
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         return navigationController

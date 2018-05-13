@@ -3,20 +3,20 @@ import RxSwift
 import UIKit
 
 protocol CharactersViewModelProtocol {
-    var characters: Observable<[Character]> { get }
+    var characters: Observable<[SeriesCharacter]> { get }
 }
 
 class CharactersViewModel: CharactersViewModelProtocol {
 
     // MARK: - Properties
 
-    private let dependecies: ApplicationDependenciesProvider
+    private let apiClient: APIClient
     private let disposeBag = DisposeBag()
 
     // MARK: - CharactersViewModelProtocol
 
-    var characters: Observable<[Character]> {
-        return dependecies.apiClient.perform(request: CharactersRequest())
+    var characters: Observable<[SeriesCharacter]> {
+        return apiClient.perform(request: CharactersRequest())
             .filter { $0.data != nil }
             .map { try JSONDecoder().decode(CharacterResponse.self, from: $0.data!) }
             .map { $0.characters }
@@ -25,8 +25,8 @@ class CharactersViewModel: CharactersViewModelProtocol {
 
     // MARK: - Init
 
-    init(dependecies: ApplicationDependenciesProvider) {
-        self.dependecies = dependecies
+    init(apiClient: APIClient) {
+        self.apiClient = apiClient
     }
 
 }

@@ -1,7 +1,5 @@
 import Quick
 import Nimble
-import RxSwift
-import RxBlocking
 import RxTest
 
 @testable import RickAndMorty
@@ -10,30 +8,35 @@ class CharactersViewModelSpec: QuickSpec {
 
     override func spec() {
         describe("CharactersViewModel") {
+            var apiClientSpy: APIClientSpy!
             var sut: CharactersViewModel!
 
             beforeEach {
-                sut = CharactersViewModel(dependecies: ApplicationDependenciesProviderStub())
+                apiClientSpy = APIClientSpy()
+
+                sut = CharactersViewModel(apiClient: apiClientSpy)
+            }
+
+            context("when binding to characters") {
+                var scheduler: TestScheduler!
+                var observer: TestableObserver<[SeriesCharacter]>!
+
+                beforeEach {
+                    scheduler = TestScheduler(initialClock: 0)
+                    observer = scheduler.createObserver([SeriesCharacter].self)
+
+                    _ = sut.characters.subscribe(observer)
+                }
+
+                it("should trigger characters request") {
+                    expect(apiClientSpy.performedRequest).to(beAKindOf(CharactersRequest.self))
+                }
+
+                it("should") {
+
+                }
             }
         }
     }
 
-}
-
-class ApplicationDependenciesProviderStub: ApplicationDependenciesProvider {
-    let apiClient: APIClient = APIClientSpy()
-}
-
-class APIClientSpy: APIClient {
-    func perform(request: APIRequest) -> Single<APIResponse> {
-        return Single.just(APIResponse(
-            data: nil,
-            response: HTTPURLResponse(
-                url: URL(string: "fixed_url")!,
-                statusCode: 200,
-                httpVersion: nil,
-                headerFields: nil)!
-            )
-        )
-    }
 }
